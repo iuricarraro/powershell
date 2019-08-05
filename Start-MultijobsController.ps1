@@ -102,7 +102,7 @@ try
     Get-Job -State Completed | Remove-Job;
     $arrJobs = @();
 
-    # Aguarda todos os jobs iniciados serem concluidos, faz o join das threads
+    # aguarda todos os jobs iniciados serem concluidos, faz o join das threads
     Get-Job | Wait-Job | Out-Null;
     Get-Job | Receive-Job;
     Get-Job | Remove-Job;
